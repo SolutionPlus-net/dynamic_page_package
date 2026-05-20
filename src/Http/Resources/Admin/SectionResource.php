@@ -1,9 +1,9 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Resources\Admin;
+namespace Otas\DynamicPages\Http\Resources\Admin;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Mabrouk\Mediable\Http\Resources\MediaResource;
+use Otas\Mediable\Http\Resources\MediaResource;
 
 class SectionResource extends JsonResource
 {

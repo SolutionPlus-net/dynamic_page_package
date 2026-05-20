@@ -1,11 +1,11 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Support;
+namespace Otas\DynamicPages\Http\Requests\Support;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Mabrouk\Translatable\Rules\RequiredForLocale;
-use SolutionPlus\DynamicPages\Rules\UniqueForLocaleWithinParent;
-use SolutionPlus\DynamicPages\Models\CustomAttribute;
+use Otas\Translatable\Rules\RequiredForLocale;
+use Otas\DynamicPages\Rules\UniqueForLocaleWithinParent;
+use Otas\DynamicPages\Models\CustomAttribute;
 
 class CustomAttributeUpdateRequest extends FormRequest
 {
@@ -56,10 +56,10 @@ class CustomAttributeUpdateRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'key' => __('solutionplus/dynamic_pages/custom_attributes.attributes.key'),
-            'name' => __('solutionplus/dynamic_pages/custom_attributes.attributes.name'),
-            'value' => __('solutionplus/dynamic_pages/custom_attributes.attributes.value'),
-            'value_validation_text' => __('solutionplus/dynamic_pages/custom_attributes.attributes.value_validation_text'),
+            'key' => __('otas/dynamic_pages/custom_attributes.attributes.key'),
+            'name' => __('otas/dynamic_pages/custom_attributes.attributes.name'),
+            'value' => __('otas/dynamic_pages/custom_attributes.attributes.value'),
+            'value_validation_text' => __('otas/dynamic_pages/custom_attributes.attributes.value_validation_text'),
         ];
     }
 }

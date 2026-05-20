@@ -1,14 +1,14 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Controllers\Admin;
+namespace Otas\DynamicPages\Http\Controllers\Admin;
 
-use SolutionPlus\DynamicPages\Http\Controllers\Controller;
-use SolutionPlus\DynamicPages\Models\Page;
-use SolutionPlus\DynamicPages\Models\Section;
-use SolutionPlus\DynamicPages\Models\CustomAttribute;
-use SolutionPlus\DynamicPages\Filters\Admin\CustomAttributeFilter;
-use SolutionPlus\DynamicPages\Http\Resources\Admin\CustomAttributeResource;
-use SolutionPlus\DynamicPages\Http\Requests\Admin\CustomAttributeUpdateRequest;
+use Otas\DynamicPages\Http\Controllers\Controller;
+use Otas\DynamicPages\Models\Page;
+use Otas\DynamicPages\Models\Section;
+use Otas\DynamicPages\Models\CustomAttribute;
+use Otas\DynamicPages\Filters\Admin\CustomAttributeFilter;
+use Otas\DynamicPages\Http\Resources\Admin\CustomAttributeResource;
+use Otas\DynamicPages\Http\Requests\Admin\CustomAttributeUpdateRequest;
 
 class SectionCustomAttributeController extends Controller
 {
@@ -42,7 +42,7 @@ class SectionCustomAttributeController extends Controller
 
         return response([
             'custom_attribute' => new CustomAttributeResource($custom_attribute),
-            'message' => __('solutionplus/dynamic_pages/custom_attributes.update'),
+            'message' => __('otas/dynamic_pages/custom_attributes.update'),
         ]);
     }
 }

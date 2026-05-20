@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Models;
+namespace Otas\DynamicPages\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -30,4 +30,4 @@ class KeywordRelatedObject extends Model
     {
         return $this->belongsTo(Keyword::class, 'keyword_id');
     }
-} 
+}

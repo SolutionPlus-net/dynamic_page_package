@@ -1,12 +1,12 @@
 <?php
 
-namespace SolutionPlus\DynamicPages;
+namespace Otas\DynamicPages;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use SolutionPlus\DynamicPages\Console\Commands\DynamicPagesPublishRoutesCommand;
-use SolutionPlus\DynamicPages\Console\Commands\DynamicPagesSetupCommand;
+use Otas\DynamicPages\Console\Commands\DynamicPagesPublishRoutesCommand;
+use Otas\DynamicPages\Console\Commands\DynamicPagesSetupCommand;
 
 class DynamicPagesServiceProvider extends ServiceProvider
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Support;
+namespace Otas\DynamicPages\Http\Requests\Support;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
@@ -52,7 +52,7 @@ class SectionMediaStoreRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'image' => __('solutionplus/dynamic_pages/sections.attributes.image'),
+            'image' => __('otas/dynamic_pages/sections.attributes.image'),
         ];
     }
 }

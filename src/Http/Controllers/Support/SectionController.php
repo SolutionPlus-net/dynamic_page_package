@@ -1,15 +1,15 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Controllers\Support;
+namespace Otas\DynamicPages\Http\Controllers\Support;
 
-use SolutionPlus\DynamicPages\Filters\Support\SectionFilter;
-use SolutionPlus\DynamicPages\Http\Controllers\Controller;
-use SolutionPlus\DynamicPages\Http\Requests\Support\SectionStoreRequest;
-use SolutionPlus\DynamicPages\Http\Requests\Support\SectionUpdateRequest;
-use SolutionPlus\DynamicPages\Http\Resources\Support\SectionResource;
-use SolutionPlus\DynamicPages\Http\Resources\Support\SectionSimpleResource;
-use SolutionPlus\DynamicPages\Models\Page;
-use SolutionPlus\DynamicPages\Models\Section;
+use Otas\DynamicPages\Filters\Support\SectionFilter;
+use Otas\DynamicPages\Http\Controllers\Controller;
+use Otas\DynamicPages\Http\Requests\Support\SectionStoreRequest;
+use Otas\DynamicPages\Http\Requests\Support\SectionUpdateRequest;
+use Otas\DynamicPages\Http\Resources\Support\SectionResource;
+use Otas\DynamicPages\Http\Resources\Support\SectionSimpleResource;
+use Otas\DynamicPages\Models\Page;
+use Otas\DynamicPages\Models\Section;
 
 class SectionController extends Controller
 {
@@ -32,7 +32,7 @@ class SectionController extends Controller
         $section = $request->storeSection();
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/sections.store'),
+            'message' => __('otas/dynamic_pages/sections.store'),
             'section' => new SectionResource($section),
         ]);
     }
@@ -64,7 +64,7 @@ class SectionController extends Controller
         $request->updateSection();
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/sections.update'),
+            'message' => __('otas/dynamic_pages/sections.update'),
             'section' => new SectionResource($section),
         ]);
     }
@@ -76,12 +76,12 @@ class SectionController extends Controller
     {
         if ($section->remove()) {
             return response([
-                'message' => __('solutionplus/dynamic_pages/sections.destroy'),
+                'message' => __('otas/dynamic_pages/sections.destroy'),
             ]);
         }
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/sections.cant_destroy'),
+            'message' => __('otas/dynamic_pages/sections.cant_destroy'),
         ], 409);
     }
 }

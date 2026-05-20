@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Resources\Support;
+namespace Otas\DynamicPages\Http\Resources\Support;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -33,4 +33,4 @@ class SectionSimpleResource extends JsonResource
             'has_items_description' => $this->has_items_description,
         ];
     }
-} 
+}

@@ -1,14 +1,14 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Controllers\Support;
+namespace Otas\DynamicPages\Http\Controllers\Support;
 
-use SolutionPlus\DynamicPages\Http\Controllers\Controller;
-use SolutionPlus\DynamicPages\Models\Page;
-use SolutionPlus\DynamicPages\Models\Section;
-use SolutionPlus\DynamicPages\Models\CustomAttribute;
-use SolutionPlus\DynamicPages\Http\Requests\Support\CustomAttributeUpdateRequest;
-use SolutionPlus\DynamicPages\Http\Requests\Support\CustomAttributeStoreRequest;
-use SolutionPlus\DynamicPages\Http\Resources\Support\CustomAttributeResource;
+use Otas\DynamicPages\Http\Controllers\Controller;
+use Otas\DynamicPages\Models\Page;
+use Otas\DynamicPages\Models\Section;
+use Otas\DynamicPages\Models\CustomAttribute;
+use Otas\DynamicPages\Http\Requests\Support\CustomAttributeUpdateRequest;
+use Otas\DynamicPages\Http\Requests\Support\CustomAttributeStoreRequest;
+use Otas\DynamicPages\Http\Resources\Support\CustomAttributeResource;
 
 class SectionCustomAttributeController extends Controller
 {
@@ -31,7 +31,7 @@ class SectionCustomAttributeController extends Controller
         $customAttribute = $request->storeCustomAttribute(relatedObject: $section);
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/custom_attributes.store'),
+            'message' => __('otas/dynamic_pages/custom_attributes.store'),
             'custom_attribute' => new CustomAttributeResource($customAttribute),
         ]);
     }
@@ -54,7 +54,7 @@ class SectionCustomAttributeController extends Controller
         $customAttribute = $request->updateCustomAttribute();
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/custom_attributes.update'),
+            'message' => __('otas/dynamic_pages/custom_attributes.update'),
             'custom_attribute' => new CustomAttributeResource($customAttribute),
         ]);
     }
@@ -66,12 +66,12 @@ class SectionCustomAttributeController extends Controller
     {
         if ($custom_attribute->remove()) {
             return response([
-                'message' => __('solutionplus/dynamic_pages/custom_attributes.destroy'),
+                'message' => __('otas/dynamic_pages/custom_attributes.destroy'),
             ]);
         }
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/custom_attributes.cant_destroy'),
+            'message' => __('otas/dynamic_pages/custom_attributes.cant_destroy'),
         ], 409);
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Filters\Admin;
+namespace Otas\DynamicPages\Filters\Admin;
 
-use Mabrouk\Filterable\Helpers\QueryFilter;
+use Otas\Filterable\Helpers\QueryFilter;
 
 class KeywordFilter extends QueryFilter
 {
@@ -13,4 +13,4 @@ class KeywordFilter extends QueryFilter
     {
         return \in_array($visible, \array_keys($this->availableBooleanValues)) ? $this->builder->visible($this->availableBooleanValues[$visible]) : $this->builder;
     }
-} 
+}

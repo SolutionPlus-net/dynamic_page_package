@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use SolutionPlus\DynamicPages\Http\Controllers\Support\PageController;
-use SolutionPlus\DynamicPages\Http\Controllers\Support\SectionController;
-use SolutionPlus\DynamicPages\Http\Controllers\Support\SectionCustomAttributeController;
-use SolutionPlus\DynamicPages\Http\Controllers\Support\SectionItemController;
-use SolutionPlus\DynamicPages\Http\Controllers\Support\SectionItemCustomAttributeController;
-use SolutionPlus\DynamicPages\Http\Controllers\Support\SectionItemMediaController;
-use SolutionPlus\DynamicPages\Http\Controllers\Support\SectionMediaController;
+use Otas\DynamicPages\Http\Controllers\Support\PageController;
+use Otas\DynamicPages\Http\Controllers\Support\SectionController;
+use Otas\DynamicPages\Http\Controllers\Support\SectionCustomAttributeController;
+use Otas\DynamicPages\Http\Controllers\Support\SectionItemController;
+use Otas\DynamicPages\Http\Controllers\Support\SectionItemCustomAttributeController;
+use Otas\DynamicPages\Http\Controllers\Support\SectionItemMediaController;
+use Otas\DynamicPages\Http\Controllers\Support\SectionMediaController;
 
 Route::group([
     'as' => 'support.',

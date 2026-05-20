@@ -1,12 +1,12 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Support;
+namespace Otas\DynamicPages\Http\Requests\Support;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use SolutionPlus\DynamicPages\Rules\UniqueForLocaleWithinParent;
-use SolutionPlus\DynamicPages\Models\SectionItem;
+use Otas\DynamicPages\Rules\UniqueForLocaleWithinParent;
+use Otas\DynamicPages\Models\SectionItem;
 
 class SectionItemStoreRequest extends FormRequest
 {
@@ -43,7 +43,7 @@ class SectionItemStoreRequest extends FormRequest
                 Rule::requiredIf($this->section->has_items_title),
                 function ($attribute, $value, $fail) {
                     if (!$this->section->has_items_title) {
-                        return $fail(__('solutionplus/dynamic_pages/section_items.errors.title_not_available'));
+                        return $fail(__('otas/dynamic_pages/section_items.errors.title_not_available'));
                     }
                 }
             ], explode('|', $this->title_validation_text)),
@@ -52,7 +52,7 @@ class SectionItemStoreRequest extends FormRequest
                 Rule::requiredIf($this->section->has_items_description),
                 function ($attribute, $value, $fail) {
                     if (!$this->section->has_items_description) {
-                        return $fail(__('solutionplus/dynamic_pages/section_items.errors.description_not_available'));
+                        return $fail(__('otas/dynamic_pages/section_items.errors.description_not_available'));
                     }
                 }
             ], explode('|', $this->description_validation_text)),
@@ -89,9 +89,9 @@ class SectionItemStoreRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'name' => __('solutionplus/dynamic_pages/section_items.attributes.name'),
-            'title' => __('solutionplus/dynamic_pages/section_items.attributes.title'),
-            'description' => __('solutionplus/dynamic_pages/section_items.attributes.description'),
+            'name' => __('otas/dynamic_pages/section_items.attributes.name'),
+            'title' => __('otas/dynamic_pages/section_items.attributes.title'),
+            'description' => __('otas/dynamic_pages/section_items.attributes.description'),
         ];
     }
 }

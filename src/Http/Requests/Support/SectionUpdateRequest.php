@@ -1,11 +1,11 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Support;
+namespace Otas\DynamicPages\Http\Requests\Support;
 
-use SolutionPlus\DynamicPages\Rules\UniqueForLocaleWithinParent;
+use Otas\DynamicPages\Rules\UniqueForLocaleWithinParent;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Http\FormRequest;
-use SolutionPlus\DynamicPages\Models\Section;
+use Otas\DynamicPages\Models\Section;
 
 class SectionUpdateRequest extends FormRequest
 {
@@ -45,7 +45,7 @@ class SectionUpdateRequest extends FormRequest
                 function ($attribute, $value, $fail) {
                     $sectionMedia = $this->section->media;
                     if ($sectionMedia && $sectionMedia->count() > $value) {
-                        $fail(__('solutionplus/dynamic_pages/sections.errors.images_exceed_allowed_count'));
+                        $fail(__('otas/dynamic_pages/sections.errors.images_exceed_allowed_count'));
                     }
                 },
             ],
@@ -54,7 +54,7 @@ class SectionUpdateRequest extends FormRequest
                 'boolean',
                 function ($attribute, $value, $fail) {
                     if ($this->section->has_items && $value == 0 && $this->section->sectionItems()->count() > 0) {
-                        $fail(__('solutionplus/dynamic_pages/sections.errors.items_already_exists'));
+                        $fail(__('otas/dynamic_pages/sections.errors.items_already_exists'));
                     }
                 },
             ],
@@ -64,7 +64,7 @@ class SectionUpdateRequest extends FormRequest
                 'min:0',
                 function ($attribute, $value, $fail) {
                     if ($this->section->item_images_count != 0 && $value == 0 && $this->section->sectionItems()->count() > 0) {
-                        $fail(__('solutionplus/dynamic_pages/sections.errors.items_already_exists'));
+                        $fail(__('otas/dynamic_pages/sections.errors.items_already_exists'));
                     }
                 },
             ],
@@ -102,13 +102,13 @@ class SectionUpdateRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'identifier' => __('solutionplus/dynamic_pages/sections.attributes.identifier'),
-            'name' => __('solutionplus/dynamic_pages/sections.attributes.name'),
-            'images_count' => __('solutionplus/dynamic_pages/sections.attributes.images_count'),
-            'has_items' => __('solutionplus/dynamic_pages/sections.attributes.has_items'),
-            'item_images_count' => __('solutionplus/dynamic_pages/sections.attributes.item_images_count'),
-            'title_validation_text' => __('solutionplus/dynamic_pages/sections.attributes.title_validation_text'),
-            'description_validation_text' => __('solutionplus/dynamic_pages/sections.attributes.description_validation_text'),
+            'identifier' => __('otas/dynamic_pages/sections.attributes.identifier'),
+            'name' => __('otas/dynamic_pages/sections.attributes.name'),
+            'images_count' => __('otas/dynamic_pages/sections.attributes.images_count'),
+            'has_items' => __('otas/dynamic_pages/sections.attributes.has_items'),
+            'item_images_count' => __('otas/dynamic_pages/sections.attributes.item_images_count'),
+            'title_validation_text' => __('otas/dynamic_pages/sections.attributes.title_validation_text'),
+            'description_validation_text' => __('otas/dynamic_pages/sections.attributes.description_validation_text'),
         ];
     }
 }

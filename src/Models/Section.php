@@ -1,12 +1,12 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Models;
+namespace Otas\DynamicPages\Models;
 
-use Mabrouk\Mediable\Models\Media;
-use Mabrouk\Mediable\Traits\Mediable;
+use Otas\Mediable\Models\Media;
+use Otas\Mediable\Traits\Mediable;
 use Illuminate\Database\Eloquent\Model;
-use Mabrouk\Filterable\Traits\Filterable;
-use Mabrouk\Translatable\Traits\Translatable;
+use Otas\Filterable\Traits\Filterable;
+use Otas\Translatable\Traits\Translatable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
@@ -108,4 +108,4 @@ class Section extends Model
 
         return true;
     }
-} 
+}

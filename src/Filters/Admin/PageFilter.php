@@ -1,8 +1,8 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Filters\Admin;
+namespace Otas\DynamicPages\Filters\Admin;
 
-use Mabrouk\Filterable\Helpers\QueryFilter;
+use Otas\Filterable\Helpers\QueryFilter;
 
 class PageFilter extends QueryFilter
 {

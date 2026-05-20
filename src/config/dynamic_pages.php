@@ -6,7 +6,7 @@ return [
     | dynamic_pages Configuration
     |--------------------------------------------------------------------------
     |
-    | Here you may configure the options for the SolutionPlus dynamic_pages package.
+    | Here you may configure the options for the Otas dynamic_pages package.
     |
     */
 

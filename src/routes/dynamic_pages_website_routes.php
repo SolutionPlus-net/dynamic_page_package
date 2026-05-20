@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use SolutionPlus\DynamicPages\Http\Controllers\Website\PageController;
+use Otas\DynamicPages\Http\Controllers\Website\PageController;
 
 Route::group([
     'as' => 'website.',

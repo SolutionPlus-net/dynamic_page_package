@@ -1,4 +1,4 @@
-# SolutionPlus Dynamic Pages
+# Otas Dynamic Pages
 
 A comprehensive Laravel dynamic pages package that provides a robust content management system with pages, sections, items, custom attributes, and keywords support. Built with multilingual capabilities and media management integration.
 
@@ -26,7 +26,7 @@ A comprehensive Laravel dynamic pages package that provides a robust content man
 Install the package via Composer:
 
 ```bash
-composer require solutionplus/dynamic-pages
+composer require otas/dynamic-pages
 ```
 
 ### Quick Setup
@@ -48,7 +48,7 @@ If you prefer manual setup:
 
 1. **Publish the configuration file:**
 ```bash
-php artisan vendor:publish --provider="SolutionPlus\DynamicPages\DynamicPagesServiceProvider"
+php artisan vendor:publish --provider="Otas\DynamicPages\DynamicPagesServiceProvider"
 ```
 
 2. **Run the migrations:**
@@ -93,11 +93,11 @@ The package includes API resources for all entities, suitable for frontend frame
 
 ### Multilingual Support
 
-All content models support Arabic and English translations out of the box. The package uses the `mabrouk/translatable` package for translation management.
+All content models support Arabic and English translations out of the box. The package uses the `otas/translatable` package for translation management.
 
 ### Filtering
 
-Advanced filtering is available for all models using the `mabrouk/filterable` package. Filter classes are organized in:
+Advanced filtering is available for all models using the `otas/filterable` package. Filter classes are organized in:
 - `Admin/` - Admin interface filters
 - `Website/` - Frontend filters
 - `Support/` - Support system filters
@@ -106,9 +106,9 @@ Advanced filtering is available for all models using the `mabrouk/filterable` pa
 
 This package depends on:
 
-- [mabrouk/translatable](https://github.com/ah-mabrouk/translatable) (>=2.0) - Multilingual support
-- [mabrouk/filterable](https://github.com/ah-mabrouk/filterable) (>=1.0) - Advanced filtering
-- [mabrouk/mediable](https://github.com/ah-mabrouk/mediable) (>=3) - Media management
+- [otas/translatable](https://github.com/SolutionPlus-net/Translatable) - Multilingual support
+- [otas/filterable](https://github.com/SolutionPlus-net/Filterable) - Advanced filtering
+- [otas/mediable](https://github.com/SolutionPlus-net/Mediable)  - Media management
 
 ## API Endpoints
 
@@ -244,7 +244,7 @@ The package provides a comprehensive content seeding system to help you populate
 
 1. **Publish the Content Seeder:**
 ```bash
-php artisan vendor:publish --provider="SolutionPlus\DynamicPages\DynamicPagesServiceProvider"
+php artisan vendor:publish --provider="Otas\DynamicPages\DynamicPagesServiceProvider"
 ```
 
 2. **Locate the Seeder:** Find the published seeder at `database/seeders/DynamicPagesContentSeeder.php`

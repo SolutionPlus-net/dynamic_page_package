@@ -1,10 +1,10 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Models;
+namespace Otas\DynamicPages\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Mabrouk\Filterable\Traits\Filterable;
-use Mabrouk\Translatable\Traits\Translatable;
+use Otas\Filterable\Traits\Filterable;
+use Otas\Translatable\Traits\Translatable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
@@ -55,4 +55,4 @@ class Keyword extends Model
 
         return true;
     }
-} 
+}

@@ -1,14 +1,14 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Controllers\Admin;
+namespace Otas\DynamicPages\Http\Controllers\Admin;
 
-use SolutionPlus\DynamicPages\Filters\Admin\KeywordFilter;
-use SolutionPlus\DynamicPages\Http\Controllers\Controller;
-use SolutionPlus\DynamicPages\Models\Keyword;
-use SolutionPlus\DynamicPages\Models\Page;
-use SolutionPlus\DynamicPages\Http\Requests\Admin\PageKeywordStoreRequest;
-use SolutionPlus\DynamicPages\Http\Resources\Admin\KeywordResource;
-use SolutionPlus\DynamicPages\Http\Resources\Admin\PageResource;
+use Otas\DynamicPages\Filters\Admin\KeywordFilter;
+use Otas\DynamicPages\Http\Controllers\Controller;
+use Otas\DynamicPages\Models\Keyword;
+use Otas\DynamicPages\Models\Page;
+use Otas\DynamicPages\Http\Requests\Admin\PageKeywordStoreRequest;
+use Otas\DynamicPages\Http\Resources\Admin\KeywordResource;
+use Otas\DynamicPages\Http\Resources\Admin\PageResource;
 
 class PageKeywordController extends Controller
 {
@@ -31,7 +31,7 @@ class PageKeywordController extends Controller
         $page = $request->syncKeywords();
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/pages.update'),
+            'message' => __('otas/dynamic_pages/pages.update'),
             'page' => new PageResource($page),
         ]);
     }

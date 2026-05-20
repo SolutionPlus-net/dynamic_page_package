@@ -1,9 +1,9 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\database\factories;
+namespace Otas\DynamicPages\database\factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use SolutionPlus\DynamicPages\Models\Page;
+use Otas\DynamicPages\Models\Page;
 
 class PageFactory extends Factory
 {

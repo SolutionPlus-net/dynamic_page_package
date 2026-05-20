@@ -1,13 +1,13 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\database\seeders;
+namespace Otas\DynamicPages\database\seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use SolutionPlus\DynamicPages\Models\CustomAttribute;
-use SolutionPlus\DynamicPages\Models\Page;
-use SolutionPlus\DynamicPages\Models\Section;
-use SolutionPlus\DynamicPages\Models\SectionItem;
+use Otas\DynamicPages\Models\CustomAttribute;
+use Otas\DynamicPages\Models\Page;
+use Otas\DynamicPages\Models\Section;
+use Otas\DynamicPages\Models\SectionItem;
 
 class DynamicPagesSeeder extends Seeder
 {
@@ -39,7 +39,6 @@ class DynamicPagesSeeder extends Seeder
         $page = Page::where('path', $pageData['page_path'])->first();
 
         if (!$page) {
-
             $page = Page::create([
                 'path' => $pageData['page_path']
             ]);
@@ -55,7 +54,6 @@ class DynamicPagesSeeder extends Seeder
         $section = Section::where('identifier', $sectionData['identifier'])->first();
 
         if (!$section) {
-
             $section = $page->sections()->create([
                 'identifier' => $sectionData['identifier'],
                 'has_title' => $sectionData['has_title'],
@@ -90,7 +88,6 @@ class DynamicPagesSeeder extends Seeder
         $sectionItem = SectionItem::where('identifier', $itemData['identifier'])->first();
 
         if (!$sectionItem) {
-
             $sectionItem = $section->sectionItems()->create([
                 'identifier' => $itemData['identifier'],
                 'title_validation_text' => $itemData['title_validation_text'],
@@ -112,7 +109,6 @@ class DynamicPagesSeeder extends Seeder
         $customAttribute = CustomAttribute::where('key', $customAttributeData['key'])->first();
 
         if (!$customAttribute) {
-
             $customAttribute = $relatedObject->customAttributes()->create([
                 'key' => $customAttributeData['key'],
                 'value_validation_text' => $customAttributeData['value_validation_text'],

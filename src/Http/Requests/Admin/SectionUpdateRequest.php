@@ -1,12 +1,12 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Admin;
+namespace Otas\DynamicPages\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\DB;
-use Mabrouk\Translatable\Rules\RequiredForLocale;
-use SolutionPlus\DynamicPages\Models\Section;
-use SolutionPlus\DynamicPages\Rules\UniqueForLocaleWithinParent;
+use Otas\Translatable\Rules\RequiredForLocale;
+use Otas\DynamicPages\Models\Section;
+use Otas\DynamicPages\Rules\UniqueForLocaleWithinParent;
 
 class SectionUpdateRequest extends FormRequest
 {
@@ -41,14 +41,14 @@ class SectionUpdateRequest extends FormRequest
             'title' => array_merge([
                 function ($attribute, $value, $fail) {
                     if (!$this->section->has_title) {
-                        return $fail(__('solutionplus/dynamic_pages/sections.errors.title_not_available'));
+                        return $fail(__('otas/dynamic_pages/sections.errors.title_not_available'));
                     }
                 }
             ], explode('|', $this->section->title_validation_text)),
             'description' => array_merge([
                 function ($attribute, $value, $fail) {
                     if (!$this->section->has_description) {
-                        return $fail(__('solutionplus/dynamic_pages/sections.errors.description_not_available'));
+                        return $fail(__('otas/dynamic_pages/sections.errors.description_not_available'));
                     }
                 }
             ], explode('|', $this->section->description_validation_text)),
@@ -70,9 +70,9 @@ class SectionUpdateRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'name' => __('solutionplus/dynamic_pages/sections.attributes.name'),
-            'title' => __('solutionplus/dynamic_pages/sections.attributes.title'),
-            'description' => __('solutionplus/dynamic_pages/sections.attributes.description'),
+            'name' => __('otas/dynamic_pages/sections.attributes.name'),
+            'title' => __('otas/dynamic_pages/sections.attributes.title'),
+            'description' => __('otas/dynamic_pages/sections.attributes.description'),
         ];
     }
 }

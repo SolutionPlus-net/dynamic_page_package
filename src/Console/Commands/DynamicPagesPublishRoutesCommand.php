@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Console\Commands;
+namespace Otas\DynamicPages\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
@@ -44,7 +44,7 @@ class DynamicPagesPublishRoutesCommand extends Command
         $this->publishRouteFiles($routeFiles, $routesPublishSubDirectory);
 
         $this->callSilent('vendor:publish', [
-            '--provider' => 'SolutionPlus\DynamicPages\DynamicPagesServiceProvider',
+            '--provider' => 'Otas\DynamicPages\DynamicPagesServiceProvider',
         ]);
 
         exec('composer dump-autoload');

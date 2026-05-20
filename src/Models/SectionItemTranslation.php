@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Models;
+namespace Otas\DynamicPages\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -9,7 +9,7 @@ class SectionItemTranslation extends Model
 {
     protected $fillable = [
         'section_item_id',
-        
+
         'locale',
         'name',
         'title',
@@ -22,4 +22,4 @@ class SectionItemTranslation extends Model
     {
         return $this->belongsTo(SectionItem::class);
     }
-} 
+}

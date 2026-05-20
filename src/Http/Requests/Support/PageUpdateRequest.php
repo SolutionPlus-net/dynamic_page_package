@@ -1,10 +1,10 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Support;
+namespace Otas\DynamicPages\Http\Requests\Support;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\DB;
-use Mabrouk\Translatable\Rules\RequiredForLocale;
+use Otas\Translatable\Rules\RequiredForLocale;
 
 class PageUpdateRequest extends FormRequest
 {
@@ -63,10 +63,10 @@ class PageUpdateRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'path' => __('solutionplus/dynamic_pages/pages.attributes.path'),
-            'name' => __('solutionplus/dynamic_pages/pages.attributes.name'),
-            'title' => __('solutionplus/dynamic_pages/pages.attributes.title'),
-            'description' => __('solutionplus/dynamic_pages/pages.attributes.description'),
+            'path' => __('otas/dynamic_pages/pages.attributes.path'),
+            'name' => __('otas/dynamic_pages/pages.attributes.name'),
+            'title' => __('otas/dynamic_pages/pages.attributes.title'),
+            'description' => __('otas/dynamic_pages/pages.attributes.description'),
         ];
     }
 }
