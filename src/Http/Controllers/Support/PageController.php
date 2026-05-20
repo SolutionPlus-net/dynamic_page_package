@@ -1,13 +1,13 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Controllers\Support;
+namespace Otas\DynamicPages\Http\Controllers\Support;
 
-use SolutionPlus\DynamicPages\Filters\Support\PageFilter;
-use SolutionPlus\DynamicPages\Http\Controllers\Controller;
-use SolutionPlus\DynamicPages\Http\Requests\Support\PageStoreRequest;
-use SolutionPlus\DynamicPages\Http\Requests\Support\PageUpdateRequest;
-use SolutionPlus\DynamicPages\Http\Resources\Support\PageResource;
-use SolutionPlus\DynamicPages\Models\Page;
+use Otas\DynamicPages\Filters\Support\PageFilter;
+use Otas\DynamicPages\Http\Controllers\Controller;
+use Otas\DynamicPages\Http\Requests\Support\PageStoreRequest;
+use Otas\DynamicPages\Http\Requests\Support\PageUpdateRequest;
+use Otas\DynamicPages\Http\Resources\Support\PageResource;
+use Otas\DynamicPages\Models\Page;
 
 class PageController extends Controller
 {
@@ -31,7 +31,7 @@ class PageController extends Controller
 
         return response([
             'page' => new PageResource($page),
-            'message' => __('solutionplus/dynamic_pages/pages.store'),
+            'message' => __('otas/dynamic_pages/pages.store'),
         ]);
     }
 
@@ -54,7 +54,7 @@ class PageController extends Controller
 
         return response([
             'page' => new PageResource($page),
-            'message' => __('solutionplus/dynamic_pages/pages.update'),
+            'message' => __('otas/dynamic_pages/pages.update'),
         ]);
     }
 
@@ -65,12 +65,12 @@ class PageController extends Controller
     {
         if ($page->remove()) {
             return response([
-                'message' => __('solutionplus/dynamic_pages/pages.destroy'),
+                'message' => __('otas/dynamic_pages/pages.destroy'),
             ]);
         }
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/pages.cant_destroy'),
+            'message' => __('otas/dynamic_pages/pages.cant_destroy'),
         ], 409);
     }
 }

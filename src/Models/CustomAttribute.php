@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Models;
+namespace Otas\DynamicPages\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Mabrouk\Filterable\Traits\Filterable;
@@ -10,7 +10,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class CustomAttribute extends Model
 {
-    use HasFactory, Translatable, Filterable;
+    use HasFactory;
+    use Translatable;
+    use Filterable;
 
     public $translatedAttributes = [
         'name',
@@ -49,4 +51,4 @@ class CustomAttribute extends Model
 
         return true;
     }
-} 
+}

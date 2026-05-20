@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Models;
+namespace Otas\DynamicPages\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Mabrouk\Filterable\Traits\Filterable;
@@ -11,7 +11,9 @@ use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class Keyword extends Model
 {
-    use HasFactory, Translatable, Filterable;
+    use HasFactory;
+    use Translatable;
+    use Filterable;
 
     public $translatedAttributes = [
         'name',
@@ -55,4 +57,4 @@ class Keyword extends Model
 
         return true;
     }
-} 
+}

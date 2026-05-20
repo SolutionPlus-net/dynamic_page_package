@@ -1,11 +1,11 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Controllers\Website;
+namespace Otas\DynamicPages\Http\Controllers\Website;
 
-use SolutionPlus\DynamicPages\Filters\Website\PageFilter;
-use SolutionPlus\DynamicPages\Http\Controllers\Controller;
-use SolutionPlus\DynamicPages\Http\Resources\Website\PageResource;
-use SolutionPlus\DynamicPages\Models\Page;
+use Otas\DynamicPages\Filters\Website\PageFilter;
+use Otas\DynamicPages\Http\Controllers\Controller;
+use Otas\DynamicPages\Http\Resources\Website\PageResource;
+use Otas\DynamicPages\Models\Page;
 
 class PageController extends Controller
 {

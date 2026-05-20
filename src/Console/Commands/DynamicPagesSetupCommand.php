@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Console\Commands;
+namespace Otas\DynamicPages\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
@@ -68,14 +68,14 @@ class DynamicPagesSetupCommand extends Command
     private function publishConfiguration($forcePublish = false)
     {
         $params = [
-            '--provider' => 'SolutionPlus\DynamicPages\DynamicPagesServiceProvider',
+            '--provider' => 'Otas\DynamicPages\DynamicPagesServiceProvider',
         ];
 
         if ($forcePublish === true) {
             $params['--force'] = true;
         }
 
-       $this->call('vendor:publish', $params);
+        $this->call('vendor:publish', $params);
     }
 
     public function runMigration()

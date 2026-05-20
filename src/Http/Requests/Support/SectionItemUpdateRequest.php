@@ -1,11 +1,11 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Support;
+namespace Otas\DynamicPages\Http\Requests\Support;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Http\FormRequest;
 use Mabrouk\Translatable\Rules\RequiredForLocale;
-use SolutionPlus\DynamicPages\Rules\UniqueForLocaleWithinParent;
+use Otas\DynamicPages\Rules\UniqueForLocaleWithinParent;
 
 class SectionItemUpdateRequest extends FormRequest
 {
@@ -42,7 +42,7 @@ class SectionItemUpdateRequest extends FormRequest
             'title' => array_merge([
                 function ($attribute, $value, $fail) {
                     if (!$this->section->has_items_title) {
-                        return $fail(__('solutionplus/dynamic_pages/section_items.errors.title_not_available'));
+                        return $fail(__('otas/dynamic_pages/section_items.errors.title_not_available'));
                     }
                 }
             ], explode('|', $this->title_validation_text ?? $this->section_item->title_validation_text)),
@@ -50,7 +50,7 @@ class SectionItemUpdateRequest extends FormRequest
             'description' => array_merge([
                 function ($attribute, $value, $fail) {
                     if (!$this->section->has_items_description) {
-                        return $fail(__('solutionplus/dynamic_pages/section_items.errors.description_not_available'));
+                        return $fail(__('otas/dynamic_pages/section_items.errors.description_not_available'));
                     }
                 }
             ], explode('|', $this->description_validation_text ?? $this->section_item->description_validation_text)),
@@ -62,7 +62,7 @@ class SectionItemUpdateRequest extends FormRequest
                 'max:190',
                 function ($attribute, $value, $fail) {
                     if (!$this->section->has_items_title) {
-                        return $fail(__('solutionplus/dynamic_pages/section_items.errors.title_not_available'));
+                        return $fail(__('otas/dynamic_pages/section_items.errors.title_not_available'));
                     }
                 },
             ],
@@ -74,7 +74,7 @@ class SectionItemUpdateRequest extends FormRequest
                 'max:190',
                 function ($attribute, $value, $fail) {
                     if (!$this->section->has_items_description) {
-                        return $fail(__('solutionplus/dynamic_pages/section_items.errors.description_not_available'));
+                        return $fail(__('otas/dynamic_pages/section_items.errors.description_not_available'));
                     }
                 },
             ],
@@ -97,12 +97,12 @@ class SectionItemUpdateRequest extends FormRequest
     public function attributes()
     {
         return [
-            'identifier' => __('solutionplus/dynamic_pages/section_items.attributes.identifier'),
-            'name' => __('solutionplus/dynamic_pages/section_items.attributes.name'),
-            'title' => __('solutionplus/dynamic_pages/section_items.attributes.title'),
-            'description' => __('solutionplus/dynamic_pages/section_items.attributes.description'),
-            'title_validation_text' => __('solutionplus/dynamic_pages/section_items.attributes.title_validation_text'),
-            'description_validation_text' => __('solutionplus/dynamic_pages/section_items.attributes.description_validation_text'),
+            'identifier' => __('otas/dynamic_pages/section_items.attributes.identifier'),
+            'name' => __('otas/dynamic_pages/section_items.attributes.name'),
+            'title' => __('otas/dynamic_pages/section_items.attributes.title'),
+            'description' => __('otas/dynamic_pages/section_items.attributes.description'),
+            'title_validation_text' => __('otas/dynamic_pages/section_items.attributes.title_validation_text'),
+            'description_validation_text' => __('otas/dynamic_pages/section_items.attributes.description_validation_text'),
         ];
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Admin;
+namespace Otas\DynamicPages\Http\Requests\Admin;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Http\FormRequest;
-use SolutionPlus\DynamicPages\Models\SectionItem;
+use Otas\DynamicPages\Models\SectionItem;
 
 class SectionItemMediaStoreRequest extends FormRequest
 {
@@ -55,7 +55,7 @@ class SectionItemMediaStoreRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'image' => __('solutionplus/dynamic_pages/section_items.attributes.image'),
+            'image' => __('otas/dynamic_pages/section_items.attributes.image'),
         ];
     }
 }

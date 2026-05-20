@@ -1,4 +1,4 @@
-# SolutionPlus Dynamic Pages
+# Otas Dynamic Pages
 
 A comprehensive Laravel dynamic pages package that provides a robust content management system with pages, sections, items, custom attributes, and keywords support. Built with multilingual capabilities and media management integration.
 
@@ -26,7 +26,7 @@ A comprehensive Laravel dynamic pages package that provides a robust content man
 Install the package via Composer:
 
 ```bash
-composer require solutionplus/dynamic-pages
+composer require otas/dynamic-pages
 ```
 
 ### Quick Setup
@@ -48,7 +48,7 @@ If you prefer manual setup:
 
 1. **Publish the configuration file:**
 ```bash
-php artisan vendor:publish --provider="SolutionPlus\DynamicPages\DynamicPagesServiceProvider"
+php artisan vendor:publish --provider="Otas\DynamicPages\DynamicPagesServiceProvider"
 ```
 
 2. **Run the migrations:**
@@ -244,7 +244,7 @@ The package provides a comprehensive content seeding system to help you populate
 
 1. **Publish the Content Seeder:**
 ```bash
-php artisan vendor:publish --provider="SolutionPlus\DynamicPages\DynamicPagesServiceProvider"
+php artisan vendor:publish --provider="Otas\DynamicPages\DynamicPagesServiceProvider"
 ```
 
 2. **Locate the Seeder:** Find the published seeder at `database/seeders/DynamicPagesContentSeeder.php`

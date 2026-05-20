@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Filters\Website;
+namespace Otas\DynamicPages\Filters\Website;
 
 use Mabrouk\Filterable\Helpers\QueryFilter;
 

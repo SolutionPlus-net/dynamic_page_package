@@ -1,10 +1,10 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Admin;
+namespace Otas\DynamicPages\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\DB;
-use SolutionPlus\DynamicPages\Models\Page;
+use Otas\DynamicPages\Models\Page;
 
 class PageKeywordStoreRequest extends FormRequest
 {
@@ -44,8 +44,8 @@ class PageKeywordStoreRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'keywords' => __('solutionplus/dynamic_pages/keywords.attributes.keywords'),
-            'keywords.*' => __('solutionplus/dynamic_pages/keywords.attributes.keyword'),
+            'keywords' => __('otas/dynamic_pages/keywords.attributes.keywords'),
+            'keywords.*' => __('otas/dynamic_pages/keywords.attributes.keyword'),
         ];
     }
 }

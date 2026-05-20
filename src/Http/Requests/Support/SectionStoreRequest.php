@@ -1,11 +1,11 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Requests\Support;
+namespace Otas\DynamicPages\Http\Requests\Support;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\DB;
-use SolutionPlus\DynamicPages\Models\Section;
-use SolutionPlus\DynamicPages\Rules\UniqueForLocaleWithinParent;
+use Otas\DynamicPages\Models\Section;
+use Otas\DynamicPages\Rules\UniqueForLocaleWithinParent;
 
 class SectionStoreRequest extends FormRequest
 {
@@ -42,7 +42,7 @@ class SectionStoreRequest extends FormRequest
                 'required_if:has_title,true',
                 function ($attribute, $value, $fail) {
                     if (!$this->has_title) {
-                        return $fail(__('solutionplus/dynamic_pages/sections.errors.title_not_available'));
+                        return $fail(__('otas/dynamic_pages/sections.errors.title_not_available'));
                     }
                 }
             ], explode('|', $this->title_validation_text)),
@@ -51,7 +51,7 @@ class SectionStoreRequest extends FormRequest
                 'required_if:has_description,true',
                 function ($attribute, $value, $fail) {
                     if (!$this->has_description) {
-                        return $fail(__('solutionplus/dynamic_pages/sections.errors.description_not_available'));
+                        return $fail(__('otas/dynamic_pages/sections.errors.description_not_available'));
                     }
                 }
             ], explode('|', $this->description_validation_text)),
@@ -72,7 +72,7 @@ class SectionStoreRequest extends FormRequest
                 'max:190',
                 function ($attribute, $value, $fail) {
                     if (!$this->has_title) {
-                        return $fail(__('solutionplus/dynamic_pages/sections.errors.title_not_available'));
+                        return $fail(__('otas/dynamic_pages/sections.errors.title_not_available'));
                     }
                 }
             ],
@@ -84,7 +84,7 @@ class SectionStoreRequest extends FormRequest
                 'max:190',
                 function ($attribute, $value, $fail) {
                     if (!$this->has_description) {
-                        return $fail(__('solutionplus/dynamic_pages/sections.errors.description_not_available'));
+                        return $fail(__('otas/dynamic_pages/sections.errors.description_not_available'));
                     }
                 }
             ],
@@ -130,18 +130,18 @@ class SectionStoreRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'name' => __('solutionplus/dynamic_pages/sections.attributes.name'),
-            'title' => __('solutionplus/dynamic_pages/sections.attributes.title'),
-            'description' => __('solutionplus/dynamic_pages/sections.attributes.description'),
-            'has_title' => __('solutionplus/dynamic_pages/sections.attributes.has_title'),
-            'has_description' => __('solutionplus/dynamic_pages/sections.attributes.has_description'),
-            'images_count' => __('solutionplus/dynamic_pages/sections.attributes.images_count'),
-            'has_items' => __('solutionplus/dynamic_pages/sections.attributes.has_items'),
-            'has_items_title' => __('solutionplus/dynamic_pages/sections.attributes.has_items_title'),
-            'has_items_description' => __('solutionplus/dynamic_pages/sections.attributes.has_items_description'),
-            'item_images_count' => __('solutionplus/dynamic_pages/sections.attributes.item_images_count'),
-            'title_validation_text' => __('solutionplus/dynamic_pages/sections.attributes.title_validation_text'),
-            'description_validation_text' => __('solutionplus/dynamic_pages/sections.attributes.description_validation_text'),
+            'name' => __('otas/dynamic_pages/sections.attributes.name'),
+            'title' => __('otas/dynamic_pages/sections.attributes.title'),
+            'description' => __('otas/dynamic_pages/sections.attributes.description'),
+            'has_title' => __('otas/dynamic_pages/sections.attributes.has_title'),
+            'has_description' => __('otas/dynamic_pages/sections.attributes.has_description'),
+            'images_count' => __('otas/dynamic_pages/sections.attributes.images_count'),
+            'has_items' => __('otas/dynamic_pages/sections.attributes.has_items'),
+            'has_items_title' => __('otas/dynamic_pages/sections.attributes.has_items_title'),
+            'has_items_description' => __('otas/dynamic_pages/sections.attributes.has_items_description'),
+            'item_images_count' => __('otas/dynamic_pages/sections.attributes.item_images_count'),
+            'title_validation_text' => __('otas/dynamic_pages/sections.attributes.title_validation_text'),
+            'description_validation_text' => __('otas/dynamic_pages/sections.attributes.description_validation_text'),
         ];
     }
 }

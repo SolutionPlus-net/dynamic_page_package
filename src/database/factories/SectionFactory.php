@@ -1,8 +1,8 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\database\factories;
+namespace Otas\DynamicPages\database\factories;
 
-use SolutionPlus\DynamicPages\Models\Page;
+use Otas\DynamicPages\Models\Page;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

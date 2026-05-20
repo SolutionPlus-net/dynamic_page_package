@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\database\factories;
+namespace Otas\DynamicPages\database\factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

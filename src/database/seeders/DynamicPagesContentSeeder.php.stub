@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use SolutionPlus\DynamicPages\database\seeders\DynamicPagesSeeder;
+use Otas\DynamicPages\database\seeders\DynamicPagesSeeder;
 
 class DynamicPagesContentSeeder extends Seeder
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Controllers\Admin;
+namespace Otas\DynamicPages\Http\Controllers\Admin;
 
-use SolutionPlus\DynamicPages\Filters\Admin\SectionItemFilter;
-use SolutionPlus\DynamicPages\Http\Controllers\Controller;
-use SolutionPlus\DynamicPages\Http\Requests\Admin\SectionItemUpdateRequest;
-use SolutionPlus\DynamicPages\Http\Resources\Admin\SectionItemResource;
-use SolutionPlus\DynamicPages\Http\Resources\Admin\SectionItemSimpleResource;
-use SolutionPlus\DynamicPages\Models\Page;
-use SolutionPlus\DynamicPages\Models\Section;
-use SolutionPlus\DynamicPages\Models\SectionItem;
+use Otas\DynamicPages\Filters\Admin\SectionItemFilter;
+use Otas\DynamicPages\Http\Controllers\Controller;
+use Otas\DynamicPages\Http\Requests\Admin\SectionItemUpdateRequest;
+use Otas\DynamicPages\Http\Resources\Admin\SectionItemResource;
+use Otas\DynamicPages\Http\Resources\Admin\SectionItemSimpleResource;
+use Otas\DynamicPages\Models\Page;
+use Otas\DynamicPages\Models\Section;
+use Otas\DynamicPages\Models\SectionItem;
 
 class SectionItemController extends Controller
 {
@@ -48,7 +48,7 @@ class SectionItemController extends Controller
         $request->sectionItemUpdate();
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/section_items.update'),
+            'message' => __('otas/dynamic_pages/section_items.update'),
             'section_item' => new SectionItemResource($section_item),
         ]);
     }

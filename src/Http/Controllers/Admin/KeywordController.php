@@ -1,13 +1,13 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Controllers\Admin;
+namespace Otas\DynamicPages\Http\Controllers\Admin;
 
-use SolutionPlus\DynamicPages\Filters\Admin\KeywordFilter;
-use SolutionPlus\DynamicPages\Http\Controllers\Controller;
-use SolutionPlus\DynamicPages\Models\Keyword;
-use SolutionPlus\DynamicPages\Http\Requests\Admin\KeywordStoreRequest;
-use SolutionPlus\DynamicPages\Http\Requests\Admin\KeywordUpdateRequest;
-use SolutionPlus\DynamicPages\Http\Resources\Admin\KeywordResource;
+use Otas\DynamicPages\Filters\Admin\KeywordFilter;
+use Otas\DynamicPages\Http\Controllers\Controller;
+use Otas\DynamicPages\Models\Keyword;
+use Otas\DynamicPages\Http\Requests\Admin\KeywordStoreRequest;
+use Otas\DynamicPages\Http\Requests\Admin\KeywordUpdateRequest;
+use Otas\DynamicPages\Http\Resources\Admin\KeywordResource;
 
 class KeywordController extends Controller
 {
@@ -30,7 +30,7 @@ class KeywordController extends Controller
         $keyword = $request->storeKeyword();
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/keywords.store'),
+            'message' => __('otas/dynamic_pages/keywords.store'),
             'keyword' => new KeywordResource($keyword),
         ]);
     }
@@ -53,7 +53,7 @@ class KeywordController extends Controller
         $request->updateKeyword();
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/keywords.update'),
+            'message' => __('otas/dynamic_pages/keywords.update'),
             'keyword' => new KeywordResource($keyword),
         ]);
     }
@@ -65,12 +65,12 @@ class KeywordController extends Controller
     {
         if ($keyword->remove()) {
             return response([
-                'message' => __('solutionplus/dynamic_pages/keywords.destroy'),
+                'message' => __('otas/dynamic_pages/keywords.destroy'),
             ]);
         }
 
         return response([
-            'message' => __('solutionplus/dynamic_pages/keywords.cant_destroy'),
+            'message' => __('otas/dynamic_pages/keywords.cant_destroy'),
         ], 409);
     }
 }

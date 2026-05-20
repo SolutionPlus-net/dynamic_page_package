@@ -1,15 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use SolutionPlus\DynamicPages\Http\Controllers\Admin\KeywordController;
-use SolutionPlus\DynamicPages\Http\Controllers\Admin\PageController;
-use SolutionPlus\DynamicPages\Http\Controllers\Admin\PageKeywordController;
-use SolutionPlus\DynamicPages\Http\Controllers\Admin\SectionController;
-use SolutionPlus\DynamicPages\Http\Controllers\Admin\SectionCustomAttributeController;
-use SolutionPlus\DynamicPages\Http\Controllers\Admin\SectionItemController;
-use SolutionPlus\DynamicPages\Http\Controllers\Admin\SectionItemCustomAttributeController;
-use SolutionPlus\DynamicPages\Http\Controllers\Admin\SectionItemMediaController;
-use SolutionPlus\DynamicPages\Http\Controllers\Admin\SectionMediaController;
+use Otas\DynamicPages\Http\Controllers\Admin\KeywordController;
+use Otas\DynamicPages\Http\Controllers\Admin\PageController;
+use Otas\DynamicPages\Http\Controllers\Admin\PageKeywordController;
+use Otas\DynamicPages\Http\Controllers\Admin\SectionController;
+use Otas\DynamicPages\Http\Controllers\Admin\SectionCustomAttributeController;
+use Otas\DynamicPages\Http\Controllers\Admin\SectionItemController;
+use Otas\DynamicPages\Http\Controllers\Admin\SectionItemCustomAttributeController;
+use Otas\DynamicPages\Http\Controllers\Admin\SectionItemMediaController;
+use Otas\DynamicPages\Http\Controllers\Admin\SectionMediaController;
 
 Route::group([
     'as' => 'admin.',
@@ -31,5 +31,4 @@ Route::group([
     Route::apiResource('section-items.medias', SectionItemMediaController::class)->only(['store', 'destroy'])->scoped();
 
     Route::apiResource('pages.sections.section-items.custom-attributes', SectionItemCustomAttributeController::class)->except(['store', 'destroy'])->scoped();
-
 });

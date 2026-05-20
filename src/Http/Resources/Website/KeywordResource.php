@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Resources\Website;
+namespace Otas\DynamicPages\Http\Resources\Website;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -19,4 +19,4 @@ class KeywordResource extends JsonResource
             'name' => $this->name,
         ];
     }
-} 
+}

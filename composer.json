@@ -1,5 +1,5 @@
 {
-    "name": "solutionplus/dynamic-pages",
+    "name": "otas/dynamic-pages",
     "type": "library",
     "description": "A comprehensive dynamic-pages package with dynamic pages, sections, items, custom attributes, and keywords support",
     "license": "MIT",
@@ -23,29 +23,29 @@
     ],
     "require": {
         "laravel/framework": ">=11.0",
-        "mabrouk/translatable": ">=2.0",
-        "mabrouk/filterable": ">=1.0",
-        "mabrouk/mediable": ">=3"
+        "otas/translatable": ">=2.0",
+        "otas/filterable": ">=1.0",
+        "otas/mediable": ">=3"
     },
     "require-dev": {
         "orchestra/testbench": "^7.0@dev"
     },
     "autoload": {
         "psr-4": {
-            "SolutionPlus\\DynamicPages\\": "src/",
+            "Otas\\DynamicPages\\": "src/",
             "Database\\Factories\\": "src/database/factories/",
             "Database\\Seeders\\": "src/database/seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SolutionPlus\\DynamicPages\\Tests\\": "tests/"
+            "Otas\\DynamicPages\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "SolutionPlus\\DynamicPages\\DynamicPagesServiceProvider"
+                "Otas\\DynamicPages\\DynamicPagesServiceProvider"
             ]
         }
     },

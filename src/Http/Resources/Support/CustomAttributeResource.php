@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Resources\Support;
+namespace Otas\DynamicPages\Http\Resources\Support;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -23,4 +23,4 @@ class CustomAttributeResource extends JsonResource
             'value_validation_text' => $this->value_validation_text,
         ];
     }
-} 
+}

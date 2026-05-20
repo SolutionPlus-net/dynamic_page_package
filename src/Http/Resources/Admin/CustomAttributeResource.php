@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Resources\Admin;
+namespace Otas\DynamicPages\Http\Resources\Admin;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 

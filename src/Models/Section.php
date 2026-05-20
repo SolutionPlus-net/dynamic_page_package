@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Models;
+namespace Otas\DynamicPages\Models;
 
 use Mabrouk\Mediable\Models\Media;
 use Mabrouk\Mediable\Traits\Mediable;
@@ -14,7 +14,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Section extends Model
 {
-    use HasFactory, Translatable, Filterable, Mediable;
+    use HasFactory;
+    use Translatable;
+    use Filterable;
+    use Mediable;
 
     public $translatedAttributes = [
         'name',
@@ -108,4 +111,4 @@ class Section extends Model
 
         return true;
     }
-} 
+}

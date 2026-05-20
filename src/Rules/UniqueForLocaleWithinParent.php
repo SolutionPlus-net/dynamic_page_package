@@ -1,6 +1,6 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Rules;
+namespace Otas\DynamicPages\Rules;
 
 use Closure;
 use Illuminate\Database\Eloquent\Model;
@@ -34,7 +34,7 @@ class UniqueForLocaleWithinParent implements ValidationRule
 
         $relationDataIds = $this->parentObject->$relationName()->pluck('id')->toArray();
 
-        $translationClass = $this->modelObject ? $this->modelObject->translationModelClass : "SolutionPlus\\DynamicPages\\Models\\" . $this->modelClass . "Translation";
+        $translationClass = $this->modelObject ? $this->modelObject->translationModelClass : "Otas\\DynamicPages\\Models\\" . $this->modelClass . "Translation";
         $locale = request()->input('locale') ?? config('translatable.fallback_locale');
 
         $alreadyExists = $translationClass::where($attribute, $value)

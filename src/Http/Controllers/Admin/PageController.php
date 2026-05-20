@@ -1,13 +1,13 @@
 <?php
 
-namespace SolutionPlus\DynamicPages\Http\Controllers\Admin;
+namespace Otas\DynamicPages\Http\Controllers\Admin;
 
-use SolutionPlus\DynamicPages\Http\Controllers\Controller;
-use SolutionPlus\DynamicPages\Models\Page;
-use SolutionPlus\DynamicPages\Filters\Admin\PageFilter;
-use SolutionPlus\DynamicPages\Http\Resources\Admin\PageResource;
-use SolutionPlus\DynamicPages\Http\Requests\Admin\PageUpdateRequest;
-use SolutionPlus\DynamicPages\Http\Resources\Admin\PageSimpleResource;
+use Otas\DynamicPages\Http\Controllers\Controller;
+use Otas\DynamicPages\Models\Page;
+use Otas\DynamicPages\Filters\Admin\PageFilter;
+use Otas\DynamicPages\Http\Resources\Admin\PageResource;
+use Otas\DynamicPages\Http\Requests\Admin\PageUpdateRequest;
+use Otas\DynamicPages\Http\Resources\Admin\PageSimpleResource;
 
 class PageController extends Controller
 {
@@ -48,7 +48,7 @@ class PageController extends Controller
 
         return response([
             'page' => new PageResource($page),
-            'message' => __('solutionplus/dynamic_pages/pages.update'),
+            'message' => __('otas/dynamic_pages/pages.update'),
         ]);
     }
 }
