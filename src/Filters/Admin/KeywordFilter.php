@@ -2,7 +2,7 @@
 
 namespace Otas\DynamicPages\Filters\Admin;
 
-use Mabrouk\Filterable\Helpers\QueryFilter;
+use Otas\Filterable\Helpers\QueryFilter;
 
 class KeywordFilter extends QueryFilter
 {

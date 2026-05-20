@@ -4,7 +4,7 @@ namespace Otas\DynamicPages\Http\Requests\Support;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Http\FormRequest;
-use Mabrouk\Translatable\Rules\RequiredForLocale;
+use Otas\Translatable\Rules\RequiredForLocale;
 use Otas\DynamicPages\Rules\UniqueForLocaleWithinParent;
 
 class SectionItemUpdateRequest extends FormRequest

@@ -5,7 +5,7 @@ namespace Otas\DynamicPages\Http\Controllers\Support;
 use Otas\DynamicPages\Http\Controllers\Controller;
 use Otas\DynamicPages\Http\Requests\Support\SectionItemMediaStoreRequest;
 use Otas\DynamicPages\Models\SectionItem;
-use Mabrouk\Mediable\Models\Media;
+use Otas\Mediable\Models\Media;
 use Otas\DynamicPages\Http\Resources\Support\SectionItemResource;
 
 class SectionItemMediaController extends Controller

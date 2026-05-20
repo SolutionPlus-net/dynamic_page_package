@@ -3,7 +3,7 @@
 namespace Otas\DynamicPages\Http\Requests\Support;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Mabrouk\Translatable\Rules\RequiredForLocale;
+use Otas\Translatable\Rules\RequiredForLocale;
 use Otas\DynamicPages\Rules\UniqueForLocaleWithinParent;
 use Otas\DynamicPages\Models\CustomAttribute;
 
